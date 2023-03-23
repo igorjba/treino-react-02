@@ -1,33 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import avatarMichelle from './assets/avatar-michelle.jpg'
+import shareIcon from './assets/icon-share.svg'
+import drawers from './assets/drawers.jpg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <div class="content-wrapper">
+      <article class="card">
+        <div class="card__img">
+          <img src={drawers} alt="furniture" />
+        </div>
+        <div class="card__text-wrapper">
+          <h1 class="card__heading">Mude a aparência geral adicionando esses toques maravilhosos aos móveis de sua casa
+          </h1>
+          <p class="card__paragraph">Já esteve em uma sala e sentiu como se algo estivesse faltando? Talvez um pouco vazia
+            e convidativa. Tenho algumas dicas simples para tornar qualquer ambiente completo.</p>
+          <div class="card__footer-wrapper">
+            <img src={avatarMichelle} alt="author" class="author__img" />
+            <div class="author__info">
+              <div class="author__name">Michele Campos</div>
+              <div class="author__date">28 Jun 2020</div>
+            </div>
+            <button class="card__btn">
+              <svg xmlns={shareIcon} class='ionicon' viewBox='0 0 512 512'>
+                <title>Seta</title>
+                <path d='M448 256L272 88v96C103.57 184 64 304.77 64 424c48.61-62.24 91.6-96 208-96v96z' fill='none' />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </article>
     </div>
   )
 }
